@@ -1,12 +1,13 @@
 Summary:	A set of utilities to manage your TV viewing.
 Name:		xmltv
 Version:	0.5.40
-Release:	0.62
+Release:	0.64
 Group:		Applications/Multimedia
 License:	GPL v2
 URL:		http://membled.com/work/apps/xmltv/
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 # Source0-md5:	5cf460444846217c0dd9f95467e9e0a1
+Patch0:		http://www.version6.net/mythtv/%{name}-grab_ee-20050412.diff
 #Patch0:		%{name}-0.5.35-noask.patch
 #Patch1:		%{name}-0.5.40-tv_grab_de_tvtoday.patch
 Requires:	perl-Date-Manip >= 5.42
@@ -127,6 +128,7 @@ This package contains graphical frontends to xmltv.
 
 %prep
 %setup -q
+%patch0 -p0
 #%patch0 -p1 -b .noask
 #%patch1 -p0 -b .tv_grab_de_tvtoday
 
@@ -149,16 +151,16 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README ChangeLog
 #%dir %{_datadir}/xmltv
-%{_bindir}/tv_cat
-%{_bindir}/tv_extractinfo_en
-%{_bindir}/tv_grep
-%{_bindir}/tv_imdb
-%{_bindir}/tv_remove_some_overlapping
-%{_bindir}/tv_sort
-%{_bindir}/tv_split
-%{_bindir}/tv_to_latex
-%{_bindir}/tv_to_text
-%{_bindir}/tv_to_potatoe
+%attr(755,root,root) %{_bindir}/tv_cat
+%attr(755,root,root) %{_bindir}/tv_extractinfo_en
+%attr(755,root,root) %{_bindir}/tv_grep
+%attr(755,root,root) %{_bindir}/tv_imdb
+%attr(755,root,root) %{_bindir}/tv_remove_some_overlapping
+%attr(755,root,root) %{_bindir}/tv_sort
+%attr(755,root,root) %{_bindir}/tv_split
+%attr(755,root,root) %{_bindir}/tv_to_latex
+%attr(755,root,root) %{_bindir}/tv_to_text
+%attr(755,root,root) %{_bindir}/tv_to_potatoe
 %{_mandir}/man1/tv_cat.1*
 %{_mandir}/man1/tv_extractinfo_en.1*
 %{_mandir}/man1/tv_grep.1*
@@ -178,12 +180,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files grabbers
 %defattr(644,root,root,755)
-%{_bindir}/tv_grab_*
+%attr(755,root,root) %{_bindir}/tv_grab_*
 %{_mandir}/man1/tv_grab_*.1*
 #%dir %{_datadir}/xmltv
 #%{_datadir}/xmltv/tv_grab_*
 
 %files gui
 %defattr(644,root,root,755)
-%{_bindir}/tv_check
+%attr(755,root,root) %{_bindir}/tv_check
 %{_mandir}/man1/tv_check.1*
