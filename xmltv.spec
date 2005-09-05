@@ -1,61 +1,63 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	A set of utilities to manage your TV viewing.
+Summary:	A set of utilities to manage your TV viewing
+Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
 Version:	0.5.40
 Release:	0.66
 Group:		Applications/Multimedia
 License:	GPL v2
-URL:		http://membled.com/work/apps/xmltv/
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 # Source0-md5:	5cf460444846217c0dd9f95467e9e0a1
 Patch0:		http://www.version6.net/mythtv/%{name}-grab_ee-20050412.diff
 #Patch0:		%{name}-0.5.35-noask.patch
 #Patch1:		%{name}-0.5.40-tv_grab_de_tvtoday.patch
-BuildRequires:	rpm-perlprov >= 4.1-13
+URL:		http://membled.com/work/apps/xmltv/
 BuildRequires:	perl(LWP) >= 5.65
-BuildRequires:	perl(XML::Parser) >= 2.34
-BuildRequires:	perl(XML::Twig) >= 3.10
 BuildRequires:	perl-Date-Manip >= 5.42
-BuildRequires:	perl(XML::Writer) >= 0.4.6
-BuildRequires:	perl(Memoize), perl(Storable) >= 2.04
+BuildRequires:	perl-Memoize
+BuildRequires:	perl-Storable >= 2.04
+BuildRequires:	perl-XML-Parser >= 2.34
+BuildRequires:	perl-XML-Twig >= 3.10
+BuildRequires:	perl-XML-Writer >= 0.4.6
 # Recommended
-BuildRequires:	perl(Lingua::EN::Numbers::Ordinate)
-BuildRequires:	perl(Lingua::Preferred) >= 0.2.4
-BuildRequires:	perl(Term::ProgressBar) >= 2.03
-BuildRequires:	perl(Compress::Zlib)
-BuildRequires:	perl(Unicode::String)
+BuildRequires:	perl-Lingua-EN-Numbers-Ordinate
+BuildRequires:	perl-Lingua-Preferred >= 0.2.4
+BuildRequires:	perl-Term-ProgressBar >= 2.03
+BuildRequires:	perl-Compress-Zlib
+BuildRequires:	perl-Unicode-String
 # tv_grab_uk_rt, tv_grab_be, tv_grab_de_tvtoday, tv_grab_fr, tv_grab_no
 # tv_grab_za
 BuildRequires:	perl(HTML::Entities) >= 1.27
 # tv_grab_uk_bleb
 BuildRequires:	perl(IO::Scalar)
-BuildRequires:	perl(Archive::Zip)
+BuildRequires:	perl-Archive-Zip
 # tv_grab_na_dd
-BuildRequires:	perl(SOAP::Lite)
-BuildRequires:	perl(Term::ReadKey)
+BuildRequires:	perl-SOAP-Lite
+BuildRequires:	perl-Term-ReadKey
 # tv_grab_na_icons
-BuildRequires:	perl(HTML::TableExtract) >= 1.08
-BuildRequires:	perl(WWW::Mechanize) => 1.02
+BuildRequires:	perl-HTML-TableExtract >= 1.08
+BuildRequires:	perl-WWW-Mechanize => 1.02
 # tv_grab_fi, tv_grab_es, tv_grab_es_digital, tv_grab_nl
 # tv_grab_nl_wolf, tv_grab_huro, tv_grab_dk, tv_grab_jp
 # tv_grab_de_tvtoday, tv_grab_fr, tv_grab_pt, tv_grab_za
 BuildRequires:	perl(HTML::TreeBuilder)
 # tv_grab_jp
-BuildRequires:	perl(Text::Kakasi)
+BuildRequires:	perl-Text-Kakasi
 # tv_grab_se, tv_grab_se_swedb
-BuildRequires:	perl(XML::LibXML)
+BuildRequires:	perl-XML-LibXML
 # tv_grab_se_swedb
-BuildRequires:	perl(IO::Stringy)
-BuildRequires:	perl(HTTP::Cache::Transparent)
+BuildRequires:	perl-IO-stringy
+BuildRequires:	perl-HTTP-Cache-Transparent
 # tv_check
-BuildRequires:	perl(Tk)
+BuildRequires:	perl-Tk
 BuildRequires:	perl-Tk-TableMatrix
 # tv_pick_cgi
-BuildRequires:	perl(CGI)
-###BuildRequires: perl(HTML::Parser) >= 3.34
-###BuildRequires: perl(XML::Simple)
+BuildRequires:	perl-CGI
+###BuildRequires: perl-HTML-Parser >= 3.34
+###BuildRequires: perl-XML-Simple
 ###BuildRequires: perl(PerIO::gzip)
-###BuildRequires: perl(HTML::LinkExtractor)
+###BuildRequires: perl-HTML-LinkExtractor
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Requires:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 Requires:	xmltv-gui = %{epoch}:%{version}-%{release}
@@ -70,11 +72,20 @@ frontend (displaying them for the user), and to implement useful
 operations like picking out your favourite programmes as filters that
 read and write XML documents.
 
+%description -l pl
+XMLTV to zestaw narzêdzi do zarz±dzania ogl±daniem TV. Dzia³aj± z
+programami telewizyjnymi zapisanymi w formacie XMLTV opartym na XML-u.
+Idea polega na oddzieleniu backendu (pobierania programów) od
+frontendu (wy¶wietlania ich u¿ytkownikowi) oraz zaimplementowaniu
+przydatnych operacji takich jak wybieranie ulubionych programów jako
+filtrów czytaj±cych i zapisuj±cych dokumenty XML.
+
 %package -n perl-XMLTV
-Summary:	Perl modules for managing your TV viewing.
-Group:		Libraries
-Requires:	perl(XML::Twig) >= 3.09
-Requires:	perl-Date-Manip >= 5.41,
+Summary:	Perl modules for managing your TV viewing
+Summary(pl):	Modu³y Perla do zarz±dzania ogl±daniem TV
+Group:		Development/Languages/Perl
+Requires:	perl-Date-Manip >= 5.41
+Requires:	perl-XML-Twig >= 3.09
 Requires:	perl-base >= 1:5.6.0
 
 %description -n perl-XMLTV
@@ -85,16 +96,27 @@ frontend (displaying them for the user), and to implement useful
 operations like picking out your favourite programmes as filters that
 read and write XML documents.
 
-This package contains the perl modules from xmltv.
+This package contains the Perl modules from XMLTV.
+
+%description -n perl-XMLTV -l pl
+XMLTV to zestaw narzêdzi do zarz±dzania ogl±daniem TV. Dzia³aj± z
+programami telewizyjnymi zapisanymi w formacie XMLTV opartym na XML-u.
+Idea polega na oddzieleniu backendu (pobierania programów) od
+frontendu (wy¶wietlania ich u¿ytkownikowi) oraz zaimplementowaniu
+przydatnych operacji takich jak wybieranie ulubionych programów jako
+filtrów czytaj±cych i zapisuj±cych dokumenty XML.
+
+Ten pakiet zawiera modu³y Perla z XMLTV.
 
 %package grabbers
-Summary:	Backends for xmltv.
+Summary:	Backends for XMLTV
+Summary(pl):	Backendy dla XMLTV
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
-Requires:	perl-Date-Manip >= 5.41
 Requires:	perl(LWP) >= 5.65
-Requires:	perl(HTML::TableExtract) >= 1.08
-Requires:	perl(Term::ProgressBar) >= 2.00
+Requires:	perl-Date-Manip >= 5.41
+Requires:	perl-HTML-TableExtract >= 1.08
+Requires:	perl-Term-ProgressBar >= 2.00
 
 %description grabbers
 XMLTV is a set of utilities to manage your TV viewing. They work with
@@ -104,10 +126,22 @@ frontend (displaying them for the user), and to implement useful
 operations like picking out your favourite programmes as filters that
 read and write XML documents.
 
-This package contains the backends (grabbers) for xmltv.
+This package contains the backends (grabbers) for XMLTV.
+
+%description grabbers -l pl
+XMLTV to zestaw narzêdzi do zarz±dzania ogl±daniem TV. Dzia³aj± z
+programami telewizyjnymi zapisanymi w formacie XMLTV opartym na XML-u.
+Idea polega na oddzieleniu backendu (pobierania programów) od
+frontendu (wy¶wietlania ich u¿ytkownikowi) oraz zaimplementowaniu
+przydatnych operacji takich jak wybieranie ulubionych programów jako
+filtrów czytaj±cych i zapisuj±cych dokumenty XML.
+
+Ten pakiet zawiera backendy (programy do ¶ci±gania informacji) dla
+XMLTV.
 
 %package gui
-Summary:	Graphical frontends to xmltv.
+Summary:	Graphical frontends to XMLTV
+Summary(pl):	Graficzne frontendy dla XMLTV
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Requires:	perl-Date-Manip >= 5.41
@@ -121,7 +155,17 @@ frontend (displaying them for the user), and to implement useful
 operations like picking out your favourite programmes as filters that
 read and write XML documents.
 
-This package contains graphical frontends to xmltv.
+This package contains graphical frontends to XMLTV.
+
+%description gui -l pl
+XMLTV to zestaw narzêdzi do zarz±dzania ogl±daniem TV. Dzia³aj± z
+programami telewizyjnymi zapisanymi w formacie XMLTV opartym na XML-u.
+Idea polega na oddzieleniu backendu (pobierania programów) od
+frontendu (wy¶wietlania ich u¿ytkownikowi) oraz zaimplementowaniu
+przydatnych operacji takich jak wybieranie ulubionych programów jako
+filtrów czytaj±cych i zapisuj±cych dokumenty XML.
+
+Ten pakiet zawiera graficzne frontendy dla XMLTV.
 
 %prep
 %setup -q
