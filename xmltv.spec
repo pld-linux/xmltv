@@ -2,7 +2,7 @@
 Summary:	A set of utilities to manage your TV viewing.
 Name:		xmltv
 Version:	0.5.40
-Release:	0.65
+Release:	0.66
 Group:		Applications/Multimedia
 License:	GPL v2
 URL:		http://membled.com/work/apps/xmltv/
@@ -56,11 +56,6 @@ BuildRequires:	perl(CGI)
 ###BuildRequires: perl(XML::Simple)
 ###BuildRequires: perl(PerIO::gzip)
 ###BuildRequires: perl(HTML::LinkExtractor)
-Requires:	perl-Date-Manip >= 5.42
-Requires:	perl(Term::ProgressBar) >= 2.03
-Requires:	perl(WWW::Mechanize) => 1.02
-Requires:	perl(Lingua::Preferred) >= 0.2.4
-###Requires: perl(HTML::Parser) >= 3.34
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Requires:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 Requires:	xmltv-gui = %{epoch}:%{version}-%{release}
