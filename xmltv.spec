@@ -1,7 +1,8 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	A set of utilities to manage your TV viewing.
 Name:		xmltv
 Version:	0.5.40
-Release:	0.64
+Release:	0.65
 Group:		Applications/Multimedia
 License:	GPL v2
 URL:		http://membled.com/work/apps/xmltv/
@@ -10,14 +11,7 @@ Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 Patch0:		http://www.version6.net/mythtv/%{name}-grab_ee-20050412.diff
 #Patch0:		%{name}-0.5.35-noask.patch
 #Patch1:		%{name}-0.5.40-tv_grab_de_tvtoday.patch
-Requires:	perl-Date-Manip >= 5.42
-Requires:	perl(Term::ProgressBar) >= 2.03
-Requires:	perl(WWW::Mechanize) => 1.02
-Requires:	perl(Lingua::Preferred) >= 0.2.4
-###Requires: perl(HTML::Parser) >= 3.34
-Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
-Requires:	xmltv-grabbers = %{epoch}:%{version}-%{release}
-Requires:	xmltv-gui = %{epoch}:%{version}-%{release}
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl(LWP) >= 5.65
 BuildRequires:	perl(XML::Parser) >= 2.34
 BuildRequires:	perl(XML::Twig) >= 3.10
@@ -62,6 +56,14 @@ BuildRequires:	perl(CGI)
 ###BuildRequires: perl(XML::Simple)
 ###BuildRequires: perl(PerIO::gzip)
 ###BuildRequires: perl(HTML::LinkExtractor)
+Requires:	perl-Date-Manip >= 5.42
+Requires:	perl(Term::ProgressBar) >= 2.03
+Requires:	perl(WWW::Mechanize) => 1.02
+Requires:	perl(Lingua::Preferred) >= 0.2.4
+###Requires: perl(HTML::Parser) >= 3.34
+Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Requires:	xmltv-grabbers = %{epoch}:%{version}-%{release}
+Requires:	xmltv-gui = %{epoch}:%{version}-%{release}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
