@@ -9,8 +9,6 @@ License:	GPL v2
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 # Source0-md5:	5cf460444846217c0dd9f95467e9e0a1
 Patch0:		http://www.version6.net/mythtv/%{name}-grab_ee-20050412.diff
-#Patch0:		%{name}-0.5.35-noask.patch
-#Patch1:		%{name}-0.5.40-tv_grab_de_tvtoday.patch
 URL:		http://membled.com/work/apps/xmltv/
 BuildRequires:	perl(LWP) >= 5.65
 BuildRequires:	perl-Date-Manip >= 5.42
@@ -53,10 +51,6 @@ BuildRequires:	perl-Tk
 BuildRequires:	perl-Tk-TableMatrix
 # tv_pick_cgi
 BuildRequires:	perl-CGI
-###BuildRequires: perl-HTML-Parser >= 3.34
-###BuildRequires: perl-XML-Simple
-###BuildRequires: perl(PerIO::gzip)
-###BuildRequires: perl-HTML-LinkExtractor
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Requires:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -170,8 +164,6 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 %prep
 %setup -q
 %patch0 -p0
-#%patch0 -p1 -b .noask
-#%patch1 -p0 -b .tv_grab_de_tvtoday
 
 %build
 echo yes | %{__perl} Makefile.PL \
@@ -191,7 +183,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog
-#%dir %{_datadir}/xmltv
 %attr(755,root,root) %{_bindir}/tv_cat
 %attr(755,root,root) %{_bindir}/tv_extractinfo_en
 %attr(755,root,root) %{_bindir}/tv_grep
@@ -223,8 +214,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_*
 %{_mandir}/man1/tv_grab_*.1*
-#%dir %{_datadir}/xmltv
-#%{_datadir}/xmltv/tv_grab_*
 
 %files gui
 %defattr(644,root,root,755)
