@@ -302,7 +302,7 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 %patch0 -p0
 
 %build
-echo yes | %{__perl} Makefile.PL \
+%{__perl} Makefile.PL -yes \
 	INSTALLDIRS=vendor
 %{__make}
 %{?with_tests:%{__make} test}
