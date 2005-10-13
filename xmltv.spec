@@ -32,7 +32,7 @@ BuildRequires:	perl-Tk
 BuildRequires:	perl-Tk-TableMatrix
 BuildRequires:	perl-Unicode-String
 BuildRequires:	perl-WWW-Mechanize => 1.02
-BuildRequires:	perl-XML-LibXML
+BuildRequires:	perl-XML-LibXML >= 1.58-1.1
 BuildRequires:	perl-XML-Parser >= 2.34
 BuildRequires:	perl-XML-Twig >= 3.10
 BuildRequires:	perl-XML-Writer >= 0.4.6
