@@ -3,7 +3,7 @@ Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
 Version:	0.5.40
-Release:	1.2
+Release:	1.3
 Group:		Applications/Multimedia
 License:	GPL v2
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
@@ -306,6 +306,7 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 
 %build
 %{__perl} Makefile.PL -yes \
+	PREFIX=%{_prefix} \
 	INSTALLDIRS=vendor
 %{__make}
 %{?with_tests:%{__make} test}
