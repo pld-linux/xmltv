@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 # Source0-md5:	5cf460444846217c0dd9f95467e9e0a1
 Patch0:		http://www.version6.net/mythtv/%{name}-grab_ee-20050412.diff
 URL:		http://membled.com/work/apps/xmltv/
-BuildRequires:	perl(LWP) >= 5.65
+BuildRequires:	perl-libwww >= 5.65
 BuildRequires:	perl-Date-Manip >= 5.42
 BuildRequires:	perl-Memoize
 BuildRequires:	perl-Storable >= 2.04
@@ -25,9 +25,9 @@ BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Unicode-String
 # tv_grab_uk_rt, tv_grab_be, tv_grab_de_tvtoday, tv_grab_fr, tv_grab_no
 # tv_grab_za
-BuildRequires:	perl(HTML::Entities) >= 1.27
+BuildRequires:	perl-HTML-Parser >= 1.27
 # tv_grab_uk_bleb
-BuildRequires:	perl(IO::Scalar)
+BuildRequires:	perl-IO-stringy
 BuildRequires:	perl-Archive-Zip
 # tv_grab_na_dd
 BuildRequires:	perl-SOAP-Lite
@@ -38,7 +38,7 @@ BuildRequires:	perl-WWW-Mechanize => 1.02
 # tv_grab_fi, tv_grab_es, tv_grab_es_digital, tv_grab_nl
 # tv_grab_nl_wolf, tv_grab_huro, tv_grab_dk, tv_grab_jp
 # tv_grab_de_tvtoday, tv_grab_fr, tv_grab_pt, tv_grab_za
-BuildRequires:	perl(HTML::TreeBuilder)
+BuildRequires:	perl-HTML-Tree
 # tv_grab_jp
 BuildRequires:	perl-Text-Kakasi
 # tv_grab_se, tv_grab_se_swedb
