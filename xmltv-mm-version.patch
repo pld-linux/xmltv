@@ -1,0 +1,13 @@
+big thanks to mauke from #perl for helping out with this
+
+--- ./Makefile.PL~	2005-10-13 22:55:34.000000000 +0300
++++ ./Makefile.PL	2005-10-14 00:44:55.000000000 +0300
+@@ -26,7 +26,7 @@
+ # given explicitly -
+ # <http://article.gmane.org/gmane.comp.tv.xmltv.devel/3634>.
+ #
+-unless ($ExtUtils::MakeMaker::VERSION >= 6.21) {
++if (eval {ExtUtils::MakeMaker->VERSION(6.21)}) {
+     if (not grep /^PREFIX=/, @ARGV) {
+ 	warn "You may want to explicitly give PREFIX to work around MakeMaker bugs.\n";
+     }
