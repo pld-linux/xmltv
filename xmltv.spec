@@ -9,6 +9,7 @@ License:	GPL v2
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 # Source0-md5:	5cf460444846217c0dd9f95467e9e0a1
 Patch0:		http://www.version6.net/mythtv/%{name}-grab_ee-20050412.diff
+Patch1:		%{name}-mm-version.patch
 URL:		http://membled.com/work/apps/xmltv/
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
@@ -301,6 +302,7 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p1
 
 %build
 %{__perl} Makefile.PL -yes \
