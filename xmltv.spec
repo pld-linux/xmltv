@@ -36,6 +36,7 @@ BuildRequires:	perl-XML-LibXML >= 1.58-1.1
 BuildRequires:	perl-XML-Parser >= 2.34
 BuildRequires:	perl-XML-Twig >= 3.10
 BuildRequires:	perl-XML-Writer >= 0.4.6
+BuildRequires:	perl-devel >= 1:5.8.7-4
 BuildRequires:	perl-libwww >= 5.65
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
