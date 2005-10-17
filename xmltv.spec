@@ -3,7 +3,7 @@ Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
 Version:	0.5.40
-Release:	1.4
+Release:	1.5
 Group:		Applications/Multimedia
 License:	GPL v2
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
@@ -139,6 +139,7 @@ XMLTV.
 Summary:	XMLTV grabber for Belgium
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-be
 Grab TV listings for Belgium
@@ -147,6 +148,7 @@ Grab TV listings for Belgium
 Summary:	XMLTV grabbers for Germany
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-de
 Grab TV listings for Germany.
@@ -155,6 +157,7 @@ Grab TV listings for Germany.
 Summary:	XMLTV grabber for Denmark
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-dk
 Grab TV listings for Denmark.
@@ -163,6 +166,7 @@ Grab TV listings for Denmark.
 Summary:	XMLTV grabber for Estonia
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-ee
 Grab TV listings for Estonia.
@@ -171,6 +175,7 @@ Grab TV listings for Estonia.
 Summary:	XMLTV grabbers for Spain
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-es
 Grab TV listings for Spain.
@@ -179,6 +184,7 @@ Grab TV listings for Spain.
 Summary:	XMLTV grabbers for Finland
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-fi
 Grab TV listings for Finland.
@@ -187,6 +193,7 @@ Grab TV listings for Finland.
 Summary:	XMLTV grabbers for France
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-fr
 Grab TV listings for France.
@@ -195,6 +202,7 @@ Grab TV listings for France.
 Summary:	XMLTV grabber for Hungary/Romania
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-huro
 Grab TV listings for Hungary or Romania.
@@ -203,6 +211,7 @@ Grab TV listings for Hungary or Romania.
 Summary:	XMLTV grabbe for Italy
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-it
 Grab TV listings for Italy.
@@ -211,6 +220,7 @@ Grab TV listings for Italy.
 Summary:	XMLTV grabbe for Japan
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-jp
 Grab TV listings for Japan.
@@ -219,6 +229,7 @@ Grab TV listings for Japan.
 Summary:	XMLTV grabber for North America
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-na
 Grab TV listings for North America using Zap2IT's Data Direct service.
@@ -228,6 +239,7 @@ Grab channel icon images or links from zap2it.com.
 Summary:	XMLTV grabber for Netherlands
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-nl
 Grab TV listings for Holland.
@@ -236,6 +248,7 @@ Grab TV listings for Holland.
 Summary:	XMLTV grabber for Norway
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-no
 Grab TV listings for Norway.
@@ -244,6 +257,7 @@ Grab TV listings for Norway.
 Summary:	XMLTV grabber for Portugal
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-pt
 Grab TV listings for Portugal.
@@ -252,6 +266,7 @@ Grab TV listings for Portugal.
 Summary:	XMLTV grabbers for Sweden
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-se
 Grab TV listings for Sweden.
@@ -260,6 +275,7 @@ Grab TV listings for Sweden.
 Summary:	XMLTV grabber for United Kingdom and Ireland
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-uk
 Grab TV listings for Britain and Ireland.
@@ -268,6 +284,7 @@ Grab TV listings for Britain and Ireland.
 Summary:	XMLTV grabber for South Africa
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-za
 Grab TV listings for South Africa.
