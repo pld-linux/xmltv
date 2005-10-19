@@ -137,15 +137,20 @@ XMLTV.
 
 %package grabber-be
 Summary:	XMLTV grabber for Belgium
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Belgii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-be
-Grab TV listings for Belgium
+Grab TV listings for Belgium.
+
+%description grabber-be -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Belgii.
 
 %package grabber-de
 Summary:	XMLTV grabbers for Germany
+Summary(pl):	Programy ¶ci±gaj±ce informacje XMLTV dla Niemiec
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -153,8 +158,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-de
 Grab TV listings for Germany.
 
+%description grabber-de -l pl
+Narzêdzia do ¶ci±gania programu telewizyjnego dla Niemiec.
+
 %package grabber-dk
 Summary:	XMLTV grabber for Denmark
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Danii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -162,8 +171,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-dk
 Grab TV listings for Denmark.
 
+%description grabber-dk -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Danii.
+
 %package grabber-ee
 Summary:	XMLTV grabber for Estonia
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Estonii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -171,8 +184,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-ee
 Grab TV listings for Estonia.
 
+%description grabber-ee -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Estonii.
+
 %package grabber-es
 Summary:	XMLTV grabbers for Spain
+Summary(pl):	Programy ¶ci±gaj±ce informacje XMLTV dla Hiszpanii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -180,8 +197,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-es
 Grab TV listings for Spain.
 
+%description grabber-es -l pl
+Narzêdzia do ¶ci±gania programu telewizyjnego dla Hiszpanii.
+
 %package grabber-fi
-Summary:	XMLTV grabbers for Finland
+Summary:	XMLTV grabber for Finland
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Finlandii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -189,8 +210,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-fi
 Grab TV listings for Finland.
 
+%description grabber-fi -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Finlandii.
+
 %package grabber-fr
-Summary:	XMLTV grabbers for France
+Summary:	XMLTV grabber for France
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Francji
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -198,8 +223,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-fr
 Grab TV listings for France.
 
+%description grabber-fr -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Francji.
+
 %package grabber-huro
 Summary:	XMLTV grabber for Hungary/Romania
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Wêgier i Rumunii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -207,8 +236,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-huro
 Grab TV listings for Hungary or Romania.
 
+%description grabber-huro -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Wêgier i Rumunii.
+
 %package grabber-it
-Summary:	XMLTV grabbe for Italy
+Summary:	XMLTV grabber for Italy
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla W³och
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -216,8 +249,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-it
 Grab TV listings for Italy.
 
+%description grabber-it -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla W³och.
+
 %package grabber-jp
-Summary:	XMLTV grabbe for Japan
+Summary:	XMLTV grabber for Japan
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Japonii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -225,8 +262,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-jp
 Grab TV listings for Japan.
 
+%description grabber-jp -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Japonii.
+
 %package grabber-na
-Summary:	XMLTV grabber for North America
+Summary:	XMLTV grabbers for North America
+Summary(pl):	Programy ¶ci±gaj±ce informacje XMLTV dla Ameryki Pó³nocnej
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -235,17 +276,27 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 Grab TV listings for North America using Zap2IT's Data Direct service.
 Grab channel icon images or links from zap2it.com.
 
+%description grabber-na -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Ameryki Pó³nocnej
+przy u¿yciu us³ugi Zap2IT Data Direct oraz narzêdzie do pobierania
+ikon lub odno¶ników z zap2it.com.
+
 %package grabber-nl
-Summary:	XMLTV grabber for Netherlands
+Summary:	XMLTV grabbers for Netherlands
+Summary(pl):	Programy ¶ci±gaj±ce informacje XMLTV dla Holandii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-nl
-Grab TV listings for Holland.
+Grab TV listings for Netherlands.
+
+%description grabber-nl -l pl
+Narzêdzia do ¶ci±gania programu telewizyjnego dla Holandii.
 
 %package grabber-no
 Summary:	XMLTV grabber for Norway
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Norwegii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -253,8 +304,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-no
 Grab TV listings for Norway.
 
+%description grabber-no -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Norwegii.
+
 %package grabber-pt
 Summary:	XMLTV grabber for Portugal
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Portugalii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -262,8 +317,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-pt
 Grab TV listings for Portugal.
 
+%description grabber-pt -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Portugalii.
+
 %package grabber-se
 Summary:	XMLTV grabbers for Sweden
+Summary(pl):	Programy ¶ci±gaj±ce informacje XMLTV dla Szwecji
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -271,8 +330,12 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-se
 Grab TV listings for Sweden.
 
+%description grabber-se -l pl
+Narzêdzia do ¶ci±gania programu telewizyjnego dla Szwecji.
+
 %package grabber-uk
-Summary:	XMLTV grabber for United Kingdom and Ireland
+Summary:	XMLTV grabbers for United Kingdom and Ireland
+Summary(pl):	Programy ¶ci±gaj±ce informacje XMLTV dla Wielkiej Brytanii i Irlandii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -280,14 +343,22 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-uk
 Grab TV listings for Britain and Ireland.
 
+%description grabber-uk -l pl
+Narzêdzia do ¶ci±gania programu telewizyjnego dla Wielkiej Brytanii i
+Irlandii.
+
 %package grabber-za
 Summary:	XMLTV grabber for South Africa
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Afryki Po³udniowej
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-za
 Grab TV listings for South Africa.
+
+%description grabber-za -l pl
+Narzêdzia do ¶ci±gania programu telewizyjnego dla Afryki Po³udniowej.
 
 %package gui
 Summary:	Graphical frontends to XMLTV
