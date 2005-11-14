@@ -32,6 +32,7 @@ BuildRequires:	perl-Text-Kakasi
 BuildRequires:	perl-Tk
 BuildRequires:	perl-Tk-TableMatrix
 BuildRequires:	perl-Unicode-String
+BuildRequires:	perl-Unicode-UTF8simple
 BuildRequires:	perl-WWW-Mechanize => 1.02
 BuildRequires:	perl-XML-LibXML >= 1.58-1.1
 BuildRequires:	perl-XML-Parser >= 2.34
@@ -444,6 +445,7 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 cp %{SOURCE1} .
 
 %build
+rm -f Makefile
 %{__perl} Makefile.PL -yes \
 	PREFIX=%{_prefix} \
 	INSTALLDIRS=vendor
