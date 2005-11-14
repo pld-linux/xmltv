@@ -1,3 +1,5 @@
+# TODO
+# - patch and remove requirement on perl-Unicode-UTF8simple (we have perl 5.6+)
 %include	/usr/lib/rpm/macros.perl
 Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
@@ -41,6 +43,7 @@ BuildRequires:	perl-XML-Writer >= 0.4.6
 BuildRequires:	perl-devel >= 1:5.8.7-4
 BuildRequires:	perl-libwww >= 5.65
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildConflicts:	perl-ExtUtils-MakeMaker > 6.17
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Requires:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 Requires:	xmltv-gui = %{epoch}:%{version}-%{release}
