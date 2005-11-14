@@ -2,15 +2,14 @@
 Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
-Version:	0.5.40
-Release:	1.5
+Version:	0.5.41
+Release:	0.1
 Group:		Applications/Multimedia
 License:	GPL v2
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
-# Source0-md5:	5cf460444846217c0dd9f95467e9e0a1
+# Source0-md5:	073e895e34ee3e86ad34ac73057c27f5
 Source1:	%{name}.dtd
-Patch0:		http://www.version6.net/mythtv/%{name}-grab_ee-20050412.diff
-Patch1:		%{name}-mm-version.patch
+Patch0:		%{name}-mm-version.patch
 URL:		http://membled.com/work/apps/xmltv/
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
@@ -95,7 +94,10 @@ Ten pakiet zawiera modu³y Perla z XMLTV.
 Summary:	Backends for XMLTV
 Summary(pl):	Backendy dla XMLTV
 Group:		Applications/Multimedia
+Requires:	%{name}-grabber-au = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-be = %{epoch}:%{version}-%{release}
+Requires:	%{name}-grabber-br = %{epoch}:%{version}-%{release}
+Requires:	%{name}-grabber-ch = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-de = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-dk = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-ee = %{epoch}:%{version}-%{release}
@@ -103,12 +105,14 @@ Requires:	%{name}-grabber-es = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-fi = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-fr = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-huro = %{epoch}:%{version}-%{release}
+Requires:	%{name}-grabber-is = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-it = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-jp = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-na = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-nl = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-no = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-pt = %{epoch}:%{version}-%{release}
+Requires:	%{name}-grabber-re = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-se = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-uk = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-za = %{epoch}:%{version}-%{release}
@@ -135,6 +139,15 @@ filtrów czytaj±cych i zapisuj±cych dokumenty XML.
 Ten pakiet zawiera backendy (programy do ¶ci±gania informacji) dla
 XMLTV.
 
+%package grabber-au
+Summary:	XMLTV grabber for Australia
+Group:		Applications/Multimedia
+Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
+
+%description grabber-au
+Grab TV listings for Australia.
+
 %package grabber-be
 Summary:	XMLTV grabber for Belgium
 Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Belgii
@@ -147,6 +160,25 @@ Grab TV listings for Belgium.
 
 %description grabber-be -l pl
 Narzêdzie do ¶ci±gania programu telewizyjnego dla Belgii.
+
+%package grabber-br
+Summary:	XMLTV grabber for Brasil
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Belgii
+Group:		Applications/Multimedia
+Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
+
+%description grabber-br
+Grab TV listings for Brasil.
+
+%package grabber-ch
+Summary:	XMLTV grabber for Switzerland
+Group:		Applications/Multimedia
+Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
+
+%description grabber-ch
+Grab TV listings for Switzerland and (partly) central Europe.
 
 %package grabber-de
 Summary:	XMLTV grabbers for Germany
@@ -239,6 +271,15 @@ Grab TV listings for Hungary or Romania.
 %description grabber-huro -l pl
 Narzêdzie do ¶ci±gania programu telewizyjnego dla Wêgier i Rumunii.
 
+%package grabber-is
+Summary:	XMLTV grabber for Iceland
+Group:		Applications/Multimedia
+Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
+
+%description grabber-is
+Grab TV listings for Iceland..
+
 %package grabber-it
 Summary:	XMLTV grabber for Italy
 Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla W³och
@@ -320,6 +361,15 @@ Grab TV listings for Portugal.
 %description grabber-pt -l pl
 Narzêdzie do ¶ci±gania programu telewizyjnego dla Portugalii.
 
+%package grabber-re
+Summary:	XMLTV grabber for Reunion Island (France)
+Group:		Applications/Multimedia
+Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
+Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
+
+%description grabber-re
+Grab TV listings for Reunion Island (France).
+
 %package grabber-se
 Summary:	XMLTV grabbers for Sweden
 Summary(pl):	Programy ¶ci±gaj±ce informacje XMLTV dla Szwecji
@@ -390,9 +440,7 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p1
-
+%patch0 -p1
 cp %{SOURCE1} .
 
 %build
@@ -444,10 +492,25 @@ rm -rf $RPM_BUILD_ROOT
 %files grabbers
 %defattr(644,root,root,755)
 
+%files grabber-au
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/tv_grab_au
+%{_mandir}/man1/tv_grab_au*
+
 %files grabber-be
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_be
 %{_mandir}/man1/tv_grab_be*
+
+%files grabber-br
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/tv_grab_br
+%{_mandir}/man1/tv_grab_br*
+
+%files grabber-ch
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/tv_grab_ch
+%{_mandir}/man1/tv_grab_ch*
 
 %files grabber-de
 %defattr(644,root,root,755)
@@ -468,7 +531,6 @@ rm -rf $RPM_BUILD_ROOT
 %files grabber-es
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_es
-%attr(755,root,root) %{_bindir}/tv_grab_es_digital
 %{_mandir}/man1/tv_grab_es*
 
 %files grabber-fi
@@ -485,6 +547,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_huro
 %{_mandir}/man1/tv_grab_huro*
+
+%files grabber-is
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/tv_grab_is
+%{_mandir}/man1/tv_grab_is*
 
 %files grabber-it
 %defattr(644,root,root,755)
@@ -517,6 +584,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_pt
 %{_mandir}/man1/tv_grab_pt*
+
+%files grabber-re
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/tv_grab_re
+%{_mandir}/man1/tv_grab_re*
 
 %files grabber-se
 %defattr(644,root,root,755)
