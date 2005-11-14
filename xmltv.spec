@@ -43,6 +43,7 @@ BuildRequires:	perl-XML-Writer >= 0.4.6
 BuildRequires:	perl-devel >= 1:5.8.7-4
 BuildRequires:	perl-libwww >= 5.65
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	goddamnit >= 6.6.6-78.1
 BuildConflicts:	perl-ExtUtils-MakeMaker > 6.17
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Requires:	xmltv-grabbers = %{epoch}:%{version}-%{release}
