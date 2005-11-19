@@ -1,12 +1,11 @@
 # TODO
 # - patch and remove requirement on perl-Unicode-UTF8simple (we have perl 5.6+)
-# - resolve too new ExtUtils::MakeMaker problem
 %include	/usr/lib/rpm/macros.perl
 Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
 Version:	0.5.41
-Release:	0.2
+Release:	1
 Group:		Applications/Multimedia
 License:	GPL v2
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
