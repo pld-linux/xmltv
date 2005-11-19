@@ -145,12 +145,16 @@ XMLTV.
 
 %package grabber-au
 Summary:	XMLTV grabber for Australia
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Australii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-au
 Grab TV listings for Australia.
+
+%description grabber-au -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Australii.
 
 %package grabber-be
 Summary:	XMLTV grabber for Belgium
@@ -167,7 +171,7 @@ Narzêdzie do ¶ci±gania programu telewizyjnego dla Belgii.
 
 %package grabber-br
 Summary:	XMLTV grabber for Brasil
-Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Belgii
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Brazylii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
@@ -175,14 +179,22 @@ Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 %description grabber-br
 Grab TV listings for Brasil.
 
+%description grabber-br -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Brazylii.
+
 %package grabber-ch
 Summary:	XMLTV grabber for Switzerland
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Szwajcarii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-ch
 Grab TV listings for Switzerland and (partly) central Europe.
+
+%description grabber-ch -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Szwajcarii oraz
+(czê¶ciowo) Europy centralnej.
 
 %package grabber-de
 Summary:	XMLTV grabbers for Germany
@@ -277,12 +289,16 @@ Narzêdzie do ¶ci±gania programu telewizyjnego dla Wêgier i Rumunii.
 
 %package grabber-is
 Summary:	XMLTV grabber for Iceland
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Islandii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-is
-Grab TV listings for Iceland..
+Grab TV listings for Iceland.
+
+%description grabber-is -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Islandii.
 
 %package grabber-it
 Summary:	XMLTV grabber for Italy
@@ -367,12 +383,17 @@ Narzêdzie do ¶ci±gania programu telewizyjnego dla Portugalii.
 
 %package grabber-re
 Summary:	XMLTV grabber for Reunion Island (France)
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla wyspy Reunion (Francja)
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{epoch}:%{version}-%{release}
 Provides:	xmltv-grabbers = %{epoch}:%{version}-%{release}
 
 %description grabber-re
 Grab TV listings for Reunion Island (France).
+
+%description grabber-re -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla wyspy Reunion
+(Francja).
 
 %package grabber-se
 Summary:	XMLTV grabbers for Sweden
