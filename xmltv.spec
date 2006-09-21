@@ -4,16 +4,16 @@
 Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
-Version:	0.5.41
-Release:	1.1
+Version:	0.5.44
+Release:	0.1
 License:	GPL v2
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
-# Source0-md5:	073e895e34ee3e86ad34ac73057c27f5
+# Source0-md5:	d6832fe7e0460f7abda05b8b56566e99
 Source1:	%{name}.dtd
 Patch0:		%{name}-strip_dorkcode_from_Makefile_PL.patch
 Patch1:		%{name}-tv_grab_ee.patch
-URL:		http://membled.com/work/apps/xmltv/
+URL:		http://xmltv.org/wiki/
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
 BuildRequires:	perl-Compress-Zlib
@@ -466,7 +466,7 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 %prep
 %setup -q
 %patch0 -p0
-%patch1 -p1
+%patch1 -p0
 cp %{SOURCE1} .
 
 %build
