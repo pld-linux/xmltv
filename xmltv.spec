@@ -10,7 +10,6 @@ License:	GPL v2
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 # Source0-md5:	d6832fe7e0460f7abda05b8b56566e99
-Source1:	%{name}.dtd
 Patch0:		%{name}-strip_dorkcode_from_Makefile_PL.patch
 Patch1:		%{name}-tv_grab_ee.patch
 URL:		http://xmltv.org/wiki/
@@ -468,7 +467,6 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 %setup -q
 %patch0 -p0
 %patch1 -p0
-cp %{SOURCE1} .
 
 %build
 rm -f Makefile
@@ -482,7 +480,6 @@ rm -f Makefile
 rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
-ln -s tv_grab_de_tvtoday $RPM_BUILD_ROOT%{_bindir}/tv_grab_de
 
 %clean
 rm -rf $RPM_BUILD_ROOT
