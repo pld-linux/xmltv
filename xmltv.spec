@@ -26,6 +26,7 @@ BuildRequires:	perl-IO-stringy
 BuildRequires:	perl-IO-stringy
 BuildRequires:	perl-Lingua-EN-Numbers-Ordinate
 BuildRequires:	perl-Lingua-Preferred >= 0.2.4
+BuildRequires:	perl-Locale-Hebrew
 BuildRequires:	perl-Memoize
 BuildRequires:	perl-SOAP-Lite
 BuildRequires:	perl-Storable >= 2.04
@@ -40,7 +41,7 @@ BuildRequires:	perl-WWW-Mechanize => 1.02
 BuildRequires:	perl-XML-LibXML >= 1.58-1.1
 BuildRequires:	perl-XML-Parser >= 2.34
 BuildRequires:	perl-XML-Twig >= 3.10
-BuildRequires:	perl-XML-Writer >= 0.4.6
+BuildRequires:	perl-XML-Writer >= 0.6
 BuildRequires:	perl-devel >= 1:5.8.7-4
 BuildRequires:	perl-libwww >= 5.65
 BuildRequires:	rpm-perlprov >= 4.1-13
