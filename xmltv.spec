@@ -5,7 +5,7 @@ Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
 Version:	0.5.44
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
@@ -13,6 +13,7 @@ Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-strip_dorkcode_from_Makefile_PL.patch
 Patch1:		%{name}-tv_grab_ee.patch
 URL:		http://xmltv.org/wiki/
+BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.30
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
 BuildRequires:	perl-Compress-Zlib
@@ -73,6 +74,10 @@ Group:		Development/Languages/Perl
 Requires:	perl-Date-Manip >= 5.41
 Requires:	perl-XML-Twig >= 3.09
 Requires:	perl-base >= 1:5.6.0
+Obsoletes:	xmltv-grabber-au
+Obsoletes:	xmltv-grabber-ch
+Obsoletes:	xmltv-grabber-de
+Obsoletes:	xmltv-grabber-se
 
 %description -n perl-XMLTV
 XMLTV is a set of utilities to manage your TV viewing. They work with
@@ -98,11 +103,11 @@ Ten pakiet zawiera modu³y Perla z XMLTV.
 Summary:	Backends for XMLTV
 Summary(pl):	Backendy dla XMLTV
 Group:		Applications/Multimedia
-Requires:	%{name}-grabber-au = %{epoch}:%{version}-%{release}
+#Requires:	%{name}-grabber-au = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-be = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-br = %{epoch}:%{version}-%{release}
-Requires:	%{name}-grabber-ch = %{epoch}:%{version}-%{release}
-Requires:	%{name}-grabber-de = %{epoch}:%{version}-%{release}
+#Requires:	%{name}-grabber-ch = %{epoch}:%{version}-%{release}
+#Requires:	%{name}-grabber-de = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-dk = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-ee = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-es = %{epoch}:%{version}-%{release}
@@ -117,7 +122,7 @@ Requires:	%{name}-grabber-nl = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-no = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-pt = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-re = %{epoch}:%{version}-%{release}
-Requires:	%{name}-grabber-se = %{epoch}:%{version}-%{release}
+#Requires:	%{name}-grabber-se = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-uk = %{epoch}:%{version}-%{release}
 Requires:	%{name}-grabber-za = %{epoch}:%{version}-%{release}
 
@@ -481,6 +486,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/XMLTV/.packlist
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -489,24 +496,38 @@ rm -rf $RPM_BUILD_ROOT
 %doc README ChangeLog xmltv.dtd
 %attr(755,root,root) %{_bindir}/tv_cat
 %attr(755,root,root) %{_bindir}/tv_extractinfo_en
+%attr(755,root,root) %{_bindir}/tv_find_grabbers
+%attr(755,root,root) %{_bindir}/tv_grab_br_net
+%attr(755,root,root) %{_bindir}/tv_grab_de_tvtoday
+%attr(755,root,root) %{_bindir}/tv_grab_es_laguiatv
+%attr(755,root,root) %{_bindir}/tv_grab_il
+%attr(755,root,root) %{_bindir}/tv_grab_se_swedb
 %attr(755,root,root) %{_bindir}/tv_grep
 %attr(755,root,root) %{_bindir}/tv_imdb
 %attr(755,root,root) %{_bindir}/tv_remove_some_overlapping
 %attr(755,root,root) %{_bindir}/tv_sort
 %attr(755,root,root) %{_bindir}/tv_split
 %attr(755,root,root) %{_bindir}/tv_to_latex
-%attr(755,root,root) %{_bindir}/tv_to_text
 %attr(755,root,root) %{_bindir}/tv_to_potatoe
+%attr(755,root,root) %{_bindir}/tv_to_text
+%attr(755,root,root) %{_bindir}/tv_validate_file
+%attr(755,root,root) %{_bindir}/tv_validate_grabber
 %{_mandir}/man1/tv_cat.1*
 %{_mandir}/man1/tv_extractinfo_en.1*
+%{_mandir}/man1/tv_find_grabbers.1p*
+%{_mandir}/man1/tv_grab_de_tvtoday.1p*
+%{_mandir}/man1/tv_grab_il.1p*
+%{_mandir}/man1/tv_grab_se_swedb.1p*
 %{_mandir}/man1/tv_grep.1*
 %{_mandir}/man1/tv_imdb.1*
 %{_mandir}/man1/tv_remove_some_overlapping.1*
 %{_mandir}/man1/tv_sort.1*
 %{_mandir}/man1/tv_split.1*
 %{_mandir}/man1/tv_to_latex.1*
-%{_mandir}/man1/tv_to_text.1*
 %{_mandir}/man1/tv_to_potatoe.1*
+%{_mandir}/man1/tv_to_text.1*
+%{_mandir}/man1/tv_validate_file.1p*
+%{_mandir}/man1/tv_validate_grabber.1p*
 
 %files -n perl-XMLTV
 %defattr(644,root,root,755)
@@ -517,10 +538,12 @@ rm -rf $RPM_BUILD_ROOT
 %files grabbers
 %defattr(644,root,root,755)
 
+%if 0
 %files grabber-au
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_au
 %{_mandir}/man1/tv_grab_au*
+%endif
 
 %files grabber-be
 %defattr(644,root,root,755)
@@ -532,16 +555,20 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/tv_grab_br
 %{_mandir}/man1/tv_grab_br*
 
+%if 0
 %files grabber-ch
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_ch
 %{_mandir}/man1/tv_grab_ch*
+%endif
 
+%if 0
 %files grabber-de
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_de
 %attr(755,root,root) %{_bindir}/tv_grab_de_tvtoday
 %{_mandir}/man1/tv_grab_de*
+%endif
 
 %files grabber-dk
 %defattr(644,root,root,755)
@@ -615,11 +642,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/tv_grab_re
 %{_mandir}/man1/tv_grab_re*
 
+%if 0
 %files grabber-se
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_se
 %attr(755,root,root) %{_bindir}/tv_grab_se_swedb
 %{_mandir}/man1/tv_grab_se*
+%endif
 
 %files grabber-uk
 %defattr(644,root,root,755)
