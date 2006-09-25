@@ -1,5 +1,10 @@
+#
+# Conditional build:
+%bcond_without	autodeps	# don't BR packages needed only for resolving deps
+#
 # TODO
 # - patch and remove requirement on perl-Unicode-UTF8simple (we have perl 5.6+)
+#
 %include	/usr/lib/rpm/macros.perl
 Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
@@ -14,15 +19,18 @@ Patch0:		%{name}-strip_dorkcode_from_Makefile_PL.patch
 Patch1:		%{name}-tv_grab_ee.patch
 URL:		http://xmltv.org/wiki/
 BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.30
+BuildRequires:	perl-Date-Manip >= 5.42
+BuildRequires:	perl-XML-Parser >= 2.34
+BuildRequires:	perl-XML-Twig >= 3.10
+BuildRequires:	perl-XML-Writer >= 0.6
+%if %{with autodeps}
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
 BuildRequires:	perl-Compress-Zlib
-BuildRequires:	perl-Date-Manip >= 5.42
 BuildRequires:	perl-HTML-Parser >= 1.27
 BuildRequires:	perl-HTML-TableExtract >= 1.08
 BuildRequires:	perl-HTML-Tree
 BuildRequires:	perl-HTTP-Cache-Transparent
-BuildRequires:	perl-IO-stringy
 BuildRequires:	perl-IO-stringy
 BuildRequires:	perl-Lingua-EN-Numbers-Ordinate
 BuildRequires:	perl-Lingua-Preferred >= 0.2.4
@@ -37,13 +45,10 @@ BuildRequires:	perl-Tk
 BuildRequires:	perl-Tk-TableMatrix
 BuildRequires:	perl-Unicode-String
 BuildRequires:	perl-Unicode-UTF8simple
-BuildRequires:	perl-WWW-Mechanize => 1.02
+BuildRequires:	perl-WWW-Mechanize >= 1.02
 BuildRequires:	perl-XML-LibXML >= 1.58-1.1
-BuildRequires:	perl-XML-Parser >= 2.34
-BuildRequires:	perl-XML-Twig >= 3.10
-BuildRequires:	perl-XML-Writer >= 0.600
-BuildRequires:	perl-devel >= 1:5.8.7-4
 BuildRequires:	perl-libwww >= 5.65
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-XMLTV = %{version}-%{release}
 Requires:	xmltv-grabbers = %{version}-%{release}
