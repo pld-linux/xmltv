@@ -10,7 +10,7 @@ Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
 Version:	0.5.44
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
@@ -81,8 +81,6 @@ Requires:	perl-XML-Twig >= 3.09
 Requires:	perl-base >= 1:5.6.0
 Obsoletes:	xmltv-grabber-au
 Obsoletes:	xmltv-grabber-ch
-Obsoletes:	xmltv-grabber-de
-Obsoletes:	xmltv-grabber-se
 
 %description -n perl-XMLTV
 XMLTV is a set of utilities to manage your TV viewing. They work with
@@ -112,7 +110,7 @@ Group:		Applications/Multimedia
 Requires:	%{name}-grabber-be = %{version}-%{release}
 Requires:	%{name}-grabber-br = %{version}-%{release}
 #Requires:	%{name}-grabber-ch = %{version}-%{release}
-#Requires:	%{name}-grabber-de = %{version}-%{release}
+Requires:	%{name}-grabber-de = %{version}-%{release}
 Requires:	%{name}-grabber-dk = %{version}-%{release}
 Requires:	%{name}-grabber-ee = %{version}-%{release}
 Requires:	%{name}-grabber-es = %{version}-%{release}
@@ -127,7 +125,7 @@ Requires:	%{name}-grabber-nl = %{version}-%{release}
 Requires:	%{name}-grabber-no = %{version}-%{release}
 Requires:	%{name}-grabber-pt = %{version}-%{release}
 Requires:	%{name}-grabber-re = %{version}-%{release}
-#Requires:	%{name}-grabber-se = %{version}-%{release}
+Requires:	%{name}-grabber-se = %{version}-%{release}
 Requires:	%{name}-grabber-uk = %{version}-%{release}
 Requires:	%{name}-grabber-za = %{version}-%{release}
 
@@ -296,6 +294,15 @@ Grab TV listings for Hungary or Romania.
 
 %description grabber-huro -l pl
 Narzêdzie do ¶ci±gania programu telewizyjnego dla Wêgier i Rumunii.
+
+%package grabber-il
+Summary:	XMLTV grabber for Israel
+Group:		Applications/Multimedia
+Requires:	perl-XMLTV = %{version}-%{release}
+Provides:	xmltv-grabbers = %{version}-%{release}
+
+%description grabber-il
+Grab TV listings for Israel.
 
 %package grabber-is
 Summary:	XMLTV grabber for Iceland
@@ -491,6 +498,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+ln -s tv_grab_de_tvtoday $RPM_BUILD_ROOT%{_bindir}/tv_grab_de
+ln -s tv_grab_se_swedb $RPM_BUILD_ROOT%{_bindir}/tv_grab_se
+
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/XMLTV/.packlist
 
 %clean
@@ -502,11 +512,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/tv_cat
 %attr(755,root,root) %{_bindir}/tv_extractinfo_en
 %attr(755,root,root) %{_bindir}/tv_find_grabbers
-%attr(755,root,root) %{_bindir}/tv_grab_br_net
-%attr(755,root,root) %{_bindir}/tv_grab_de_tvtoday
-%attr(755,root,root) %{_bindir}/tv_grab_es_laguiatv
-%attr(755,root,root) %{_bindir}/tv_grab_il
-%attr(755,root,root) %{_bindir}/tv_grab_se_swedb
 %attr(755,root,root) %{_bindir}/tv_grep
 %attr(755,root,root) %{_bindir}/tv_imdb
 %attr(755,root,root) %{_bindir}/tv_remove_some_overlapping
@@ -520,9 +525,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/tv_cat.1*
 %{_mandir}/man1/tv_extractinfo_en.1*
 %{_mandir}/man1/tv_find_grabbers.1p*
-%{_mandir}/man1/tv_grab_de_tvtoday.1p*
-%{_mandir}/man1/tv_grab_il.1p*
-%{_mandir}/man1/tv_grab_se_swedb.1p*
 %{_mandir}/man1/tv_grep.1*
 %{_mandir}/man1/tv_imdb.1*
 %{_mandir}/man1/tv_remove_some_overlapping.1*
@@ -558,6 +560,7 @@ rm -rf $RPM_BUILD_ROOT
 %files grabber-br
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_br
+%attr(755,root,root) %{_bindir}/tv_grab_br_net
 %{_mandir}/man1/tv_grab_br*
 
 %if 0
@@ -567,13 +570,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/tv_grab_ch*
 %endif
 
-%if 0
 %files grabber-de
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_de
 %attr(755,root,root) %{_bindir}/tv_grab_de_tvtoday
-%{_mandir}/man1/tv_grab_de*
-%endif
+%attr(755,root,root) %{_bindir}/tv_grab_de
+%{_mandir}/man1/tv_grab_de_tvtoday.1p*
 
 %files grabber-dk
 %defattr(644,root,root,755)
@@ -588,6 +589,7 @@ rm -rf $RPM_BUILD_ROOT
 %files grabber-es
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_es
+%attr(755,root,root) %{_bindir}/tv_grab_es_laguiatv
 %{_mandir}/man1/tv_grab_es*
 
 %files grabber-fi
@@ -604,6 +606,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_huro
 %{_mandir}/man1/tv_grab_huro*
+
+%files grabber-il
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/tv_grab_il
+%{_mandir}/man1/tv_grab_il*
 
 %files grabber-is
 %defattr(644,root,root,755)
@@ -647,13 +654,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/tv_grab_re
 %{_mandir}/man1/tv_grab_re*
 
-%if 0
 %files grabber-se
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_se
 %attr(755,root,root) %{_bindir}/tv_grab_se_swedb
 %{_mandir}/man1/tv_grab_se*
-%endif
+%{_mandir}/man1/tv_grab_se_swedb.1p*
 
 %files grabber-uk
 %defattr(644,root,root,755)
