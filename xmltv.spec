@@ -297,12 +297,16 @@ Narzêdzie do ¶ci±gania programu telewizyjnego dla Wêgier i Rumunii.
 
 %package grabber-il
 Summary:	XMLTV grabber for Israel
+Summary(pl):	Program ¶ci±gaj±cy informacje XMLTV dla Izraela
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
 
 %description grabber-il
 Grab TV listings for Israel.
+
+%description grabber-il -l pl
+Narzêdzie do ¶ci±gania programu telewizyjnego dla Izraela.
 
 %package grabber-is
 Summary:	XMLTV grabber for Iceland
