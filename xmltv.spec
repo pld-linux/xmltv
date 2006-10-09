@@ -10,7 +10,7 @@ Summary:	A set of utilities to manage your TV viewing
 Summary(pl):	Zestaw narzêdzi do zarz±dzania ogl±daniem TV
 Name:		xmltv
 Version:	0.5.44
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
