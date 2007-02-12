@@ -7,7 +7,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	A set of utilities to manage your TV viewing
-Summary(pl.UTF-8):   Zestaw narzędzi do zarządzania oglądaniem TV
+Summary(pl.UTF-8):	Zestaw narzędzi do zarządzania oglądaniem TV
 Name:		xmltv
 Version:	0.5.44
 Release:	3
@@ -74,7 +74,7 @@ filtrów czytających i zapisujących dokumenty XML.
 
 %package -n perl-XMLTV
 Summary:	Perl modules for managing your TV viewing
-Summary(pl.UTF-8):   Moduły Perla do zarządzania oglądaniem TV
+Summary(pl.UTF-8):	Moduły Perla do zarządzania oglądaniem TV
 Group:		Development/Languages/Perl
 Requires:	perl-Date-Manip >= 5.41
 Requires:	perl-XML-Twig >= 3.09
@@ -104,7 +104,7 @@ Ten pakiet zawiera moduły Perla z XMLTV.
 
 %package grabbers
 Summary:	Backends for XMLTV
-Summary(pl.UTF-8):   Backendy dla XMLTV
+Summary(pl.UTF-8):	Backendy dla XMLTV
 Group:		Applications/Multimedia
 #Requires:	%{name}-grabber-au = %{version}-%{release}
 Requires:	%{name}-grabber-be = %{version}-%{release}
@@ -153,7 +153,7 @@ XMLTV.
 
 %package grabber-au
 Summary:	XMLTV grabber for Australia
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Australii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Australii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -166,7 +166,7 @@ Narzędzie do ściągania programu telewizyjnego dla Australii.
 
 %package grabber-be
 Summary:	XMLTV grabber for Belgium
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Belgii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Belgii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -179,7 +179,7 @@ Narzędzie do ściągania programu telewizyjnego dla Belgii.
 
 %package grabber-br
 Summary:	XMLTV grabber for Brasil
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Brazylii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Brazylii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -192,7 +192,7 @@ Narzędzie do ściągania programu telewizyjnego dla Brazylii.
 
 %package grabber-ch
 Summary:	XMLTV grabber for Switzerland
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Szwajcarii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Szwajcarii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -206,7 +206,7 @@ Narzędzie do ściągania programu telewizyjnego dla Szwajcarii oraz
 
 %package grabber-de
 Summary:	XMLTV grabbers for Germany
-Summary(pl.UTF-8):   Programy ściągające informacje XMLTV dla Niemiec
+Summary(pl.UTF-8):	Programy ściągające informacje XMLTV dla Niemiec
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -219,7 +219,7 @@ Narzędzia do ściągania programu telewizyjnego dla Niemiec.
 
 %package grabber-dk
 Summary:	XMLTV grabber for Denmark
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Danii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Danii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -232,7 +232,7 @@ Narzędzie do ściągania programu telewizyjnego dla Danii.
 
 %package grabber-ee
 Summary:	XMLTV grabber for Estonia
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Estonii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Estonii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -245,7 +245,7 @@ Narzędzie do ściągania programu telewizyjnego dla Estonii.
 
 %package grabber-es
 Summary:	XMLTV grabbers for Spain
-Summary(pl.UTF-8):   Programy ściągające informacje XMLTV dla Hiszpanii
+Summary(pl.UTF-8):	Programy ściągające informacje XMLTV dla Hiszpanii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -258,7 +258,7 @@ Narzędzia do ściągania programu telewizyjnego dla Hiszpanii.
 
 %package grabber-fi
 Summary:	XMLTV grabber for Finland
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Finlandii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Finlandii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -271,7 +271,7 @@ Narzędzie do ściągania programu telewizyjnego dla Finlandii.
 
 %package grabber-fr
 Summary:	XMLTV grabber for France
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Francji
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Francji
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -284,7 +284,7 @@ Narzędzie do ściągania programu telewizyjnego dla Francji.
 
 %package grabber-huro
 Summary:	XMLTV grabber for Hungary/Romania
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Węgier i Rumunii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Węgier i Rumunii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -297,7 +297,7 @@ Narzędzie do ściągania programu telewizyjnego dla Węgier i Rumunii.
 
 %package grabber-il
 Summary:	XMLTV grabber for Israel
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Izraela
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Izraela
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -310,7 +310,7 @@ Narzędzie do ściągania programu telewizyjnego dla Izraela.
 
 %package grabber-is
 Summary:	XMLTV grabber for Iceland
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Islandii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Islandii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -323,7 +323,7 @@ Narzędzie do ściągania programu telewizyjnego dla Islandii.
 
 %package grabber-it
 Summary:	XMLTV grabber for Italy
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Włoch
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Włoch
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -336,7 +336,7 @@ Narzędzie do ściągania programu telewizyjnego dla Włoch.
 
 %package grabber-jp
 Summary:	XMLTV grabber for Japan
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Japonii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Japonii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -349,7 +349,7 @@ Narzędzie do ściągania programu telewizyjnego dla Japonii.
 
 %package grabber-na
 Summary:	XMLTV grabbers for North America
-Summary(pl.UTF-8):   Programy ściągające informacje XMLTV dla Ameryki Północnej
+Summary(pl.UTF-8):	Programy ściągające informacje XMLTV dla Ameryki Północnej
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -365,7 +365,7 @@ ikon lub odnośników z zap2it.com.
 
 %package grabber-nl
 Summary:	XMLTV grabbers for Netherlands
-Summary(pl.UTF-8):   Programy ściągające informacje XMLTV dla Holandii
+Summary(pl.UTF-8):	Programy ściągające informacje XMLTV dla Holandii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -378,7 +378,7 @@ Narzędzia do ściągania programu telewizyjnego dla Holandii.
 
 %package grabber-no
 Summary:	XMLTV grabber for Norway
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Norwegii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Norwegii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -391,7 +391,7 @@ Narzędzie do ściągania programu telewizyjnego dla Norwegii.
 
 %package grabber-pt
 Summary:	XMLTV grabber for Portugal
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Portugalii
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Portugalii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -404,7 +404,7 @@ Narzędzie do ściągania programu telewizyjnego dla Portugalii.
 
 %package grabber-re
 Summary:	XMLTV grabber for Reunion Island (France)
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla wyspy Reunion (Francja)
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla wyspy Reunion (Francja)
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -418,7 +418,7 @@ Narzędzie do ściągania programu telewizyjnego dla wyspy Reunion
 
 %package grabber-se
 Summary:	XMLTV grabbers for Sweden
-Summary(pl.UTF-8):   Programy ściągające informacje XMLTV dla Szwecji
+Summary(pl.UTF-8):	Programy ściągające informacje XMLTV dla Szwecji
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -431,7 +431,7 @@ Narzędzia do ściągania programu telewizyjnego dla Szwecji.
 
 %package grabber-uk
 Summary:	XMLTV grabbers for United Kingdom and Ireland
-Summary(pl.UTF-8):   Programy ściągające informacje XMLTV dla Wielkiej Brytanii i Irlandii
+Summary(pl.UTF-8):	Programy ściągające informacje XMLTV dla Wielkiej Brytanii i Irlandii
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -445,7 +445,7 @@ Irlandii.
 
 %package grabber-za
 Summary:	XMLTV grabber for South Africa
-Summary(pl.UTF-8):   Program ściągający informacje XMLTV dla Afryki Południowej
+Summary(pl.UTF-8):	Program ściągający informacje XMLTV dla Afryki Południowej
 Group:		Applications/Multimedia
 Requires:	perl-XMLTV = %{version}-%{release}
 Provides:	xmltv-grabbers = %{version}-%{release}
@@ -458,7 +458,7 @@ Narzędzia do ściągania programu telewizyjnego dla Afryki Południowej.
 
 %package gui
 Summary:	Graphical frontends to XMLTV
-Summary(pl.UTF-8):   Graficzne frontendy dla XMLTV
+Summary(pl.UTF-8):	Graficzne frontendy dla XMLTV
 Group:		Applications/Multimedia
 Requires:	perl(LWP) >= 5.65
 Requires:	perl-Date-Manip >= 5.41
