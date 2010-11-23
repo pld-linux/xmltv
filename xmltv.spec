@@ -9,12 +9,12 @@
 Summary:	A set of utilities to manage your TV viewing
 Summary(pl.UTF-8):	Zestaw narzędzi do zarządzania oglądaniem TV
 Name:		xmltv
-Version:	0.5.44
-Release:	3
+Version:	0.5.59
+Release:	1
 License:	GPL v2
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
-# Source0-md5:	d6832fe7e0460f7abda05b8b56566e99
+# Source0-md5:	29497a1d165ef0cdedfe376e04c06903
 Patch0:		%{name}-strip_dorkcode_from_Makefile_PL.patch
 Patch1:		%{name}-tv_grab_ee.patch
 URL:		http://xmltv.org/wiki/
@@ -487,7 +487,7 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 %prep
 %setup -q
 %patch0 -p0
-%patch1 -p0
+# %patch1 -p0
 
 %build
 rm -f Makefile
@@ -502,8 +502,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-ln -s tv_grab_de_tvtoday $RPM_BUILD_ROOT%{_bindir}/tv_grab_de
-ln -s tv_grab_se_swedb $RPM_BUILD_ROOT%{_bindir}/tv_grab_se
+# ln -s tv_grab_de_tvtoday $RPM_BUILD_ROOT%{_bindir}/tv_grab_de
+# ln -s tv_grab_se_swedb $RPM_BUILD_ROOT%{_bindir}/tv_grab_se
 
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/XMLTV/.packlist
 
@@ -558,14 +558,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files grabber-be
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_be
-%{_mandir}/man1/tv_grab_be*
+# %attr(755,root,root) %{_bindir}/tv_grab_be
+# %{_mandir}/man1/tv_grab_be*
 
 %files grabber-br
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_br
-%attr(755,root,root) %{_bindir}/tv_grab_br_net
-%{_mandir}/man1/tv_grab_br*
+# %attr(755,root,root) %{_bindir}/tv_grab_br
+# %attr(755,root,root) %{_bindir}/tv_grab_br_net
+# %{_mandir}/man1/tv_grab_br*
 
 %if 0
 %files grabber-ch
@@ -576,14 +576,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files grabber-de
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_de_tvtoday
-%attr(755,root,root) %{_bindir}/tv_grab_de
-%{_mandir}/man1/tv_grab_de_tvtoday.1p*
+# %attr(755,root,root) %{_bindir}/tv_grab_de_tvtoday
+# %attr(755,root,root) %{_bindir}/tv_grab_de
+# %{_mandir}/man1/tv_grab_de_tvtoday.1p*
 
-%files grabber-dk
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_dk
-%{_mandir}/man1/tv_grab_dk*
+# %files grabber-dk
+# %defattr(644,root,root,755)
+# %attr(755,root,root) %{_bindir}/tv_grab_dk
+# %{_mandir}/man1/tv_grab_dk*
 
 %files grabber-ee
 %defattr(644,root,root,755)
@@ -592,9 +592,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files grabber-es
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_es
-%attr(755,root,root) %{_bindir}/tv_grab_es_laguiatv
-%{_mandir}/man1/tv_grab_es*
+# %attr(755,root,root) %{_bindir}/tv_grab_es
+# %attr(755,root,root) %{_bindir}/tv_grab_es_laguiatv
+# %{_mandir}/man1/tv_grab_es*
 
 %files grabber-fi
 %defattr(644,root,root,755)
@@ -628,8 +628,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files grabber-jp
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_jp
-%{_mandir}/man1/tv_grab_jp*
+# %attr(755,root,root) %{_bindir}/tv_grab_jp
+# %{_mandir}/man1/tv_grab_jp*
 
 %files grabber-na
 %defattr(644,root,root,755)
@@ -639,14 +639,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files grabber-nl
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_nl
-%attr(755,root,root) %{_bindir}/tv_grab_nl_wolf
-%{_mandir}/man1/tv_grab_nl*
+# %attr(755,root,root) %{_bindir}/tv_grab_nl
+# %attr(755,root,root) %{_bindir}/tv_grab_nl_wolf
+# %{_mandir}/man1/tv_grab_nl*
 
 %files grabber-no
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/tv_grab_no
-%{_mandir}/man1/tv_grab_no*
+# %attr(755,root,root) %{_bindir}/tv_grab_no
+# %{_mandir}/man1/tv_grab_no*
 
 %files grabber-pt
 %defattr(644,root,root,755)
