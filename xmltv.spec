@@ -16,7 +16,6 @@ Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
 # Source0-md5:	29497a1d165ef0cdedfe376e04c06903
 Patch0:		%{name}-strip_dorkcode_from_Makefile_PL.patch
-Patch1:		%{name}-tv_grab_ee.patch
 URL:		http://xmltv.org/wiki/
 BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.30
 BuildRequires:	perl-Date-Manip >= 5.42
@@ -487,7 +486,6 @@ Ten pakiet zawiera graficzne frontendy dla XMLTV.
 %prep
 %setup -q
 %patch0 -p0
-# %patch1 -p0
 
 %build
 rm -f Makefile
