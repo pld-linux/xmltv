@@ -4,13 +4,42 @@
 #
 # TODO
 # - patch and remove requirement on perl-Unicode-UTF8simple (we have perl 5.6+)
+# - unpackaged files
+#   /usr/bin/tv_extractinfo_ar
+#   /usr/bin/tv_grab_ch_search
+#   /usr/bin/tv_grab_combiner
+#   /usr/bin/tv_grab_dk_dr
+#   /usr/bin/tv_grab_dtv_la
+#   /usr/bin/tv_grab_es_laguiatv
+#   /usr/bin/tv_grab_es_miguiatv
+#   /usr/bin/tv_grab_eu_epgdata
+#   /usr/bin/tv_grab_fi_sv
+#   /usr/bin/tv_grab_hr
+#   /usr/bin/tv_grab_in
+#   /usr/bin/tv_grab_it_dvb
+#   /usr/bin/tv_grab_na_dtv
+#   /usr/bin/tv_grab_nl
+#   /usr/bin/tv_grab_no_gfeed
+#   /usr/bin/tv_grab_pt_meo
+#   /usr/share/man/man1/tv_extractinfo_ar.1p.gz
+#   /usr/share/man/man1/tv_grab_ch_search.1p.gz
+#   /usr/share/man/man1/tv_grab_combiner.1p.gz
+#   /usr/share/man/man1/tv_grab_dk_dr.1p.gz
+#   /usr/share/man/man1/tv_grab_dtv_la.1p.gz
+#   /usr/share/man/man1/tv_grab_es_laguiatv.1p.gz
+#   /usr/share/man/man1/tv_grab_es_miguiatv.1p.gz
+#   /usr/share/man/man1/tv_grab_eu_epgdata.1p.gz
+#   /usr/share/man/man1/tv_grab_hr.1p.gz
+#   /usr/share/man/man1/tv_grab_in.1p.gz
+#   /usr/share/man/man1/tv_grab_nl.1p.gz
+#   /usr/share/man/man1/tv_grab_no_gfeed.1p.gz
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	A set of utilities to manage your TV viewing
 Summary(pl.UTF-8):	Zestaw narzędzi do zarządzania oglądaniem TV
 Name:		xmltv
 Version:	0.5.59
-Release:	1
+Release:	0.1
 License:	GPL v2
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/xmltv/%{name}-%{version}.tar.bz2
