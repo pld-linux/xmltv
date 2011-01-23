@@ -502,9 +502,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# ln -s tv_grab_de_tvtoday $RPM_BUILD_ROOT%{_bindir}/tv_grab_de
-# ln -s tv_grab_se_swedb $RPM_BUILD_ROOT%{_bindir}/tv_grab_se
-
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/XMLTV/.packlist
 
 %clean
@@ -556,16 +553,20 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/tv_grab_au*
 %endif
 
+%if 0
 %files grabber-be
 %defattr(644,root,root,755)
-# %attr(755,root,root) %{_bindir}/tv_grab_be
-# %{_mandir}/man1/tv_grab_be*
+%attr(755,root,root) %{_bindir}/tv_grab_be
+%{_mandir}/man1/tv_grab_be*
+%endif
 
+%if 0
 %files grabber-br
 %defattr(644,root,root,755)
-# %attr(755,root,root) %{_bindir}/tv_grab_br
-# %attr(755,root,root) %{_bindir}/tv_grab_br_net
-# %{_mandir}/man1/tv_grab_br*
+%attr(755,root,root) %{_bindir}/tv_grab_br
+%attr(755,root,root) %{_bindir}/tv_grab_br_net
+%{_mandir}/man1/tv_grab_br*
+%endif
 
 %if 0
 %files grabber-ch
@@ -574,27 +575,33 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/tv_grab_ch*
 %endif
 
+%if 0
 %files grabber-de
 %defattr(644,root,root,755)
-# %attr(755,root,root) %{_bindir}/tv_grab_de_tvtoday
-# %attr(755,root,root) %{_bindir}/tv_grab_de
-# %{_mandir}/man1/tv_grab_de_tvtoday.1p*
+%attr(755,root,root) %{_bindir}/tv_grab_de_tvtoday
+%attr(755,root,root) %{_bindir}/tv_grab_de
+%{_mandir}/man1/tv_grab_de_tvtoday.1p*
+%endif
 
-# %files grabber-dk
-# %defattr(644,root,root,755)
-# %attr(755,root,root) %{_bindir}/tv_grab_dk
-# %{_mandir}/man1/tv_grab_dk*
+%if 0
+%files grabber-dk
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/tv_grab_dk
+%{_mandir}/man1/tv_grab_dk*
+%endif
 
 %files grabber-ee
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/tv_grab_ee
 %{_mandir}/man1/tv_grab_ee*
 
+%if 0
 %files grabber-es
 %defattr(644,root,root,755)
-# %attr(755,root,root) %{_bindir}/tv_grab_es
-# %attr(755,root,root) %{_bindir}/tv_grab_es_laguiatv
-# %{_mandir}/man1/tv_grab_es*
+%attr(755,root,root) %{_bindir}/tv_grab_es
+%attr(755,root,root) %{_bindir}/tv_grab_es_laguiatv
+%{_mandir}/man1/tv_grab_es*
+%endif
 
 %files grabber-fi
 %defattr(644,root,root,755)
@@ -626,10 +633,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/tv_grab_it
 %{_mandir}/man1/tv_grab_it*
 
+%if 0
 %files grabber-jp
 %defattr(644,root,root,755)
-# %attr(755,root,root) %{_bindir}/tv_grab_jp
-# %{_mandir}/man1/tv_grab_jp*
+%attr(755,root,root) %{_bindir}/tv_grab_jp
+%{_mandir}/man1/tv_grab_jp*
+%endif
 
 %files grabber-na
 %defattr(644,root,root,755)
@@ -637,16 +646,20 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/tv_grab_na_icons
 %{_mandir}/man1/tv_grab_na*
 
+%if 0
 %files grabber-nl
 %defattr(644,root,root,755)
-# %attr(755,root,root) %{_bindir}/tv_grab_nl
-# %attr(755,root,root) %{_bindir}/tv_grab_nl_wolf
-# %{_mandir}/man1/tv_grab_nl*
+%attr(755,root,root) %{_bindir}/tv_grab_nl
+%attr(755,root,root) %{_bindir}/tv_grab_nl_wolf
+%{_mandir}/man1/tv_grab_nl*
+%endif
 
+%if 0
 %files grabber-no
 %defattr(644,root,root,755)
-# %attr(755,root,root) %{_bindir}/tv_grab_no
-# %{_mandir}/man1/tv_grab_no*
+%attr(755,root,root) %{_bindir}/tv_grab_no
+%{_mandir}/man1/tv_grab_no*
+%endif
 
 %files grabber-pt
 %defattr(644,root,root,755)
