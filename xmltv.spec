@@ -34,7 +34,6 @@
 #   /usr/share/man/man1/tv_grab_nl.1p.gz
 #   /usr/share/man/man1/tv_grab_no_gfeed.1p.gz
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	A set of utilities to manage your TV viewing
 Summary(pl.UTF-8):	Zestaw narzędzi do zarządzania oglądaniem TV
 Name:		xmltv
